@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tap Game</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="greet">Hi ...</h1>
+      <div class="coin-count">Total coins: <span id="coins">0</span></div>
+      <div class="session-count">
+        Session coins: <span id="session">0</span>
+      </div>
+      <div id="tapArea" title="Tap Me!">🐹</div>
+    </div>
+
+    <script>
+      const user_id = "{{ user_id }}";
+      let session_coins = 0;
+      let total_coins = 0;
+      let first_name = "";
+      let last_name = "";
+      let pending_save = false;
+
+      // Fetch user info and total coins
+      fetch("/api/user?user_id=" + user_id)
+        .then((r) => r.json())
+        .then((data) => {
+          first_name = data.first_name || "";
+          last_name = data.last_name || "";
+          total_coins = data.coins || 0;
+          document.getElementById("greet").textContent =
+            "Hi " + first_name + " " + last_name;
+          document.getElementById("coins").textContent = total_coins;
+        });
+
+      // Tap event
+      function tapAction() {
+        session_coins++;
+        document.getElementById("session").textContent = session_coins;
+        document.getElementById("coins").textContent =
+          total_coins + session_coins;
+        pending_save = true;
+
+        // Pop animation on tap
+        const el = document.getElementById("tapArea");
+        el.style.transform = "scale(1.14)";
+        setTimeout(() => (el.style.transform = "scale(1)"), 120);
+      }
+
+      // Touch & click handler for all devices
+      const tapArea = document.getElementById("tapArea");
+      tapArea.addEventListener("click", tapAction);
+      tapArea.addEventListener("touchstart", function (e) {
+        e.preventDefault();
+        tapAction();
+      });
+
+      // Auto-save session coins every 3 seconds
+      setInterval(function () {
+        if (pending_save && session_coins > 0) {
+          saveSessionCoins();
+        }
+      }, 3000);
+
+      // Save on page unload/close
+      window.addEventListener("beforeunload", function (e) {
+        if (session_coins > 0) {
+          navigator.sendBeacon(
+            "/api/batch_tap",
+            JSON.stringify({ user_id: user_id, add_coins: session_coins })
+          );
+        }
+      });
+
+      // Save function
+      function saveSessionCoins() {
+        fetch("/api/batch_tap", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ user_id: user_id, add_coins: session_coins }),
+        })
+          .then((r) => r.json())
+          .then((data) => {
+            total_coins = data.coins;
+            document.getElementById("coins").textContent = total_coins;
+            session_coins = 0;
+            document.getElementById("session").textContent = 0;
+            pending_save = false;
+          })
+          .catch((err) => {
+            // Optionally log errors
+            console.error("Save failed", err);
+          });
+      }
+    </script>
+  </body>
+</html>
