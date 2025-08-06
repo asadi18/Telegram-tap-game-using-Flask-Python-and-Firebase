@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "aquamasterprimetgbot",
+  "private_key_id": "4c713bd502f0a6b2087cfdd3c7d023e75068132e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC54p/fwxhhJ02F\nmublCkml/5tdM73lDBhyU5reYhBg3e732hHl74oRCzwe5/auF0oR731yyhHr4ARV\nFK2gPaU2+xS01HDC9YxQVQBIYYutIQ9lcf5mx2UR00FC01inpCoI6u87UKWMKqYR\nq45TqSRqAKwOFPaOYL5YtTPqhcGg/KTxMDTlvPLwCfX6vjxK1hMu7+gyRP7gk9UW\nn4kLhKdKud51Xi1j7/PDk41NHP663jrm0hVR3Ky4z7bHk/ArRkdOnJr9dLu57H1Z\nbDxiO2KvrQl2+fz8NPpTl//Nr9yCyiJ3Ab1123+iAWGw8m4eGhyRXuhQ0hGgWYac\nrj+I6S5JAgMBAAECggEAB/NjZDZGONhDWWzGkH26qGDWUTZmhRavMFYBdfPwKxHY\nZ/3fWHGWUGP7ISqfI1N4BcFednD3MvAaL1Ya674x7rfu6vclOumMJAl8DByEABaT\nFS3liZmLafzvudSBYmuZUq1TKJCAAY6iG3e2NuoxVl61/UTfRjgUHDDlShQziS0C\naBf8smjDKfa5xnVw9vBS6YROWMy09LRsUyuB2+qejMFYqVIu37N0P7S+KVR8No0a\nJFwJLZzhx6NW4NvSiQctI8eW2SLEKLssJFrTEXrw/5AfPgamKnqcLTFeajzZc5u0\nGPJjxfxu5LjBTIcd8PeeoAJEDth5pGgEfdx+ik3piQKBgQD6ejoCamASNqGA7Xrh\nYIcK4H/YqYRVmgNj1aUAH4uoQlpWfLbblLAZSGBmMlghu1AqLNXO3DyHUzWAdRg+\nnINHecdFBHh2nKxbIAWgVYb/JkoWPkAG1wq/bzs3sATuVndD8/LozbN8t9VRSmBf\nkC6QnOO7gDtggQ3mGfywbX477QKBgQC9+9G7W4ZBuLPmiX3Li6d20xVACJKYQGVF\n9QbM3AnRgNc4dRVRfDw4YSR2I9PGmuK8lsdNmYaw/Fq1jPlSOkwEghonKb4gar19\nPhts6cWXIpLeNAh37+mOuz8m6sKYxcwCNNbIUvYc9W/unWtG4RDzgZLOll2hQfge\njOxdw6DITQKBgB8u3k/0rFc4I+0oI5cxbD6HaoMvv4Dktq1UKMGWK83bzOFdj2pQ\n3YeYQiAW/m/coQNPJ6MkOgji7BM9ALKyy4k3eP53qwOhR7fkia7HVxIm0yxnvZLc\nbMMedvHc4RBHBXwZP9GJ4mGRhWYka1EaYyGv1o4+TaYbCv7tl07josaVAoGAZklv\neVVkqnvceDHshauSJVqupUQ4UTrSi+DJoYCS1LZuqdn3+WBPN/etXuIZQmPf0bPI\naJJRP3cPC5J0Jf53MTIvDIjf8aomjYjj0TboCGA3/OS87n5AHHXaIYTh8skD9ugl\n/8MS+TJ36lvdB1NkAgbwWMQCczEGesRa+ny6Uz0CgYAvF+B0RtGHZgC9Dcrtjoxe\ncrs9UpVofedO/E1bPLqBjuQiK/g5/nq3qn/6L2vGSHm3io/WDTji/GKetF0NDnes\nOmxZ5WgBvCSJ+RGUFTCfkQNAoKEkINHPE05L3ZUl0pjTsnCQzI/y9SuzHKCqTZKe\nJ2gIKoZKuIDsmpj0mCJyrQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@aquamasterprimetgbot.iam.gserviceaccount.com",
+  "client_id": "102048614392828149634",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40aquamasterprimetgbot.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
